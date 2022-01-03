@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+body {
+    margin: 0;
+    background-image: url('imagenes/facultad.jpg');
+    background-color: rgb(80,80,80);
+    min-height: 100vh;
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form_login{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 50px 4px rgba(24, 24, 24, 0.5);
+    background-color: #e9ecef;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    margin-top: 30px;
+}
+.texto_form_login{
+    text-align: center;
+    margin-top: 0;
+    color: #03071e;
+}
+.form_input, .form_label, .form_submit{
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+    z-index: 1;
+}
+.form_input{
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    background: rgba(108, 117, 125, 0.1);
+    border-radius: 10px;
+}
+.form_input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+.form_input:focus + 
+.form_label{
+    margin-top: -140px;
+}
+.form_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -89px;
+    z-index: -20;
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s;
+}
+.form_submit{
+    background-color: #99d98c;
+    padding: 4%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#pass{
+    margin-bottom: 10px !important;
+}
+.l1{
+    margin-top: -58px;
+}
+.form_input:focus + 
+.l1{
+    margin-top: -110px;
+}
+.fijar{
+    margin-top: -140px;
+}
+.fijar2{
+    margin-top: -110px;
+}
+.error{
+    background-color: red;
+}

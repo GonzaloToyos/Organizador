@@ -1,0 +1,38 @@
+.size_18{
+    font-size: 18px !important;
+}
+.size_24{
+    font-size: 24px !important;
+}
+.azul-gradient{
+    background: linear-gradient(45deg, rgb(33, 47, 90), rgb(19, 81, 138));
+}
+.nav-final{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+table{
+    table-layout: fixed !important;
+}
+.formulario{
+    text-align: center;
+}
+.error{
+    color: red;
+}
+.contenedor_badges{
+    display: flex !important;
+    flex-wrap: nowrap;
+}
+h5{
+    margin-right: 5px;
+}
+.texto_centrado_badges{
+    padding-top: 11.5px !important;
+}
+@media screen and (max-width:800px) {
+    .nav-final{
+        flex-wrap: wrap;
+    }
+}
