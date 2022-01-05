@@ -3,6 +3,7 @@ include("db.php");
 include('includes/header.php');
 $title = '';
 $description = '';
+$monto = '';
 $nombre = "tareas.".$_SESSION['usuario'];
 
 if (isset($_GET['id'])) {
@@ -14,7 +15,7 @@ if (isset($_GET['id'])) {
         $title = $row['title'];
         $description = $row['description'];
         $date = $row['reg_date'];
-        echo $date;
+        $monto = $row['monto'];
     }
 }
 
@@ -23,8 +24,9 @@ if (isset($_POST['actualizar'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
     $date = $_POST['date'];
+    $monto = $_POST['monto'];
 
-    $query = "UPDATE `$nombre` set title = '$title', description = '$description', reg_date = '$date' WHERE id=$id";
+    $query = "UPDATE `$nombre` set title = '$title', description = '$description', reg_date = '$date', monto = $monto WHERE id=$id";
     mysqli_query($conn, $query);
     $_SESSION['mensaje'] = 'Tarea actualizada';
     $_SESSION['tipo_de_mensaje'] = 'warning';
@@ -43,8 +45,9 @@ if (isset($_POST['actualizar'])) {
                     <div class="form-group" style="margin-bottom: 25px;">
                         <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description; ?></textarea>
                     </div>
-                    <input type="date" name="date" value="<?php echo $date?>" class="form-control">
-                    <button class="btn btn-success boton" name="actualizar">
+                    <input type="date" name="date" value="<?php echo $date?>" class="form-control mb-3">
+                    <input type="number" name="monto" class="form-control" value="<?php echo $monto?>" placeholder="$">
+                    <button class="btn btn-success boton mt-3" name="actualizar">
                         Actualizar
                     </button>
                 </form>

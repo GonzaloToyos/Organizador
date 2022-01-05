@@ -61,7 +61,8 @@
                         title VARCHAR(100) NOT NULL,
                         description VARCHAR(500) NOT NULL,
                         /*reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP*/
-                        reg_date DATE NOT NULL
+                        reg_date DATE NOT NULL,
+                        monto INT(6) UNSIGNED
                         )";
                     $resultado_crear_tabla = mysqli_query($conn, $query_tabla); //crea una tabla por usuario, en la que guarda sus tareas
                     if (!$resultado) {

@@ -12,9 +12,6 @@
     justify-content: center;
     text-align: center;
 }
-table{
-    table-layout: fixed !important;
-}
 .formulario{
     text-align: center;
 }
